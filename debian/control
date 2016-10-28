@@ -1,0 +1,51 @@
+Source: python-ewmh
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all (>= 2.6.6-3),
+               python-setuptools (>= 0.6.24),
+               python3-all,
+               python3-setuptools (>= 0.6.24),
+               python-docutils,
+               python-sphinx
+Standards-Version: 3.9.7
+Homepage: https://github.com/parkouss/pyewmh/
+Vcs-Git: https://github.com/parkouss/pyewmh.git
+Vcs-Browser: https://github.com/parkouss/pyewmh/
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+
+Package: python-ewmh
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-xlib
+Suggests: python-ewmh-doc
+Description: Python interface to EWMH-compliant window managers (Python 2)
+ python-ewmh is a 100% pure Python implementation of the EWMH (Extended
+ Window Manager Hints) protocol, which can be used to query and control
+ EWMH-compliant window managers.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-ewmh
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-xlib
+Suggests: python-ewmh-doc
+Description: Python interface to EWMH-compliant window managers (Python 3)
+ python-ewmh is a 100% pure Python implementation of the EWMH (Extended
+ Window Manager Hints) protocol, which can be used to query and control
+ EWMH-compliant window managers.
+ .
+ This package installs the library for Python 3.
+
+Package: python-ewmh-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Python interface to EWMH-compliant window managers (common documentation)
+ python-ewmh is a 100% pure Python implementation of the EWMH (Extended
+ Window Manager Hints) protocol, which can be used to query and control
+ EWMH-compliant window managers.
+ .
+ This is the common documentation package.
